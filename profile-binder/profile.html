@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Meléndez | Digital Resume Binder</title>
+  <link rel="stylesheet" href="../shared/styles.css" />
+  <link rel="stylesheet" href="profile.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: flex-start;
+    }
+
+    .tabs button {
+      background: linear-gradient(to right, #1f3b4d, #274d63);
+      color: #fff;
+      padding: 12px 16px;
+      font-weight: bold;
+      border: none;
+      border-bottom: 1px solid #0d1a26;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .tabs button:hover {
+      background: linear-gradient(to right, #2b5876, #4e4376);
+    }
+
+    .tabs button.active {
+      background: linear-gradient(to right, #102331, #183a52);
+      color: #ffffff;
+      font-weight: bolder;
+      box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+    }
+
+    .back-button {
+      margin-top: auto;
+      background: #555;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 16px;
+      border: none;
+      border-top: 1px solid #444;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #1abc9c;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="binder">
+    <nav class="tabs">
+      <button onclick="navigateTo('sections/objective.html')">Objective</button>
+      <button onclick="navigateTo('sections/education.html')">Education</button>
+      <button onclick="navigateTo('sections/skills.html')">Skills</button>
+      <button onclick="navigateTo('sections/certifications.html')">Certifications</button>
+      <button onclick="navigateTo('sections/honors.html')">Honors & Awards</button>
+      <button onclick="navigateTo('sections/contact.html')">Contact Info</button>
+      <button onclick="navigateTo('sections/references.html')">References</button>
+      <button onclick="goBack()" class="back-button"> Back to About Me</button>
+    </nav>
+
+    <main class="content" id="tab-content">
+      <p>Please feel free to skim through my digital Résumé!</p>
+    </main>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = "about-me.html";
+    }
+
+    function navigateTo(filename) {
+      window.location.href = filename;
+    }
+  </script>
+</body>
+</html>
+
